@@ -1,0 +1,90 @@
+/* [레이아웃 나누기 순서]
+  1. 크게 가로 / 가로 안에서도 가로로 나누기
+  2. 세로 
+
+  선택자: selector
+*/
+.blind {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+#center-align {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+#header-top {
+  /* float: right; */
+}
+#header-top span {
+  /* color: #888; */
+  /* letter-spacing: -1px; */
+  /* font-size: 11px; */
+  /* line-height: 22px; */
+}
+
+/* 태그 > 자식 */
+#header-search > .naver-logo {
+  display: inline-block;
+  width: 225px;
+  height: 58px;
+  background-image: url(../images/sp_main_dba1af.png);
+  background-position: 0px 41.4%;
+  background-size: 205%;
+  margin: 21px 0;
+} /* #center-align h1 {} 자손 */
+
+#header-search > a {
+  vertical-align: middle;
+}
+
+#header-search h1 {
+  display: none;
+}
+
+#header-search h2 {
+  display: none;
+}
+
+#header-search fieldset {
+  margin-left: 20px;
+  margin-top: 12px;
+  display: inline-block;
+  padding: 12px 0 12px 10px;
+  width: 521px;
+  height: 54px;
+  border-radius: 2px;
+  border: 2px solid #19ce60;
+  vertical-align: middle;
+}
+
+#header-search fieldset input {
+  border: none;
+  outline: 0;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: top;
+}
+
+#header-search fieldset input::placeholder {
+  color: #fff;
+}
+
+#header-search fieldset button {
+  /* position: absolute; */
+  width: 49px;
+  height: 49px;
+  padding: 0;
+  border: none;
+  border-radius: 0 2px 2px 0;
+  background-color: #19ce60;
+  cursor: pointer;
+  /* 위치고정 */
+  position: absolute;
+  right: -2px;
+  top: -2px;
+}

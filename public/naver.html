@@ -13,30 +13,42 @@
     <!-- 페이지에 적용할 style -->
     <style>
       * {
-        /* text-align: center; */
+        box-sizing: border-box; /* 모든 box의 사이즈를 합산해서 결과를 내어라 */
       }
     </style>
   </head>
+
   <body>
     <header>
-      <!--class="center-align" 가운데 정렬용 div-->
-      <div class="center-align">
-        <div>
-          <h1>
-            <a href="https://www.naver.com/">
-              <span>네이버</span>
-            </a>
-          </h1>
-          <div>
+      <!-- class="center-align" 가운데 정렬용 div -->
+      <div id="center-align">
+        <div id="header-top">
+          <span>
             <a>네이버를 시작페이지로</a>
-            <i class="sa_bar"></i>
+          </span>
+          <i class="sa_bar"></i>
+          <span>
             <a href="https://jr.naver.com/">쥬니어네이버</a>
+          </span>
+          <span>
             <a href="https://happybean.naver.com/">해피빈</a>
-          </div>
-          <fieldset>
-            <legend>검색</legend>
-            <input type="text" placeholder="검색어를 입력해 주세요." />
-            <button>검색</button>
+          </span>
+        </div>
+        <div id="header-search">
+          <a class="naver-logo" href="https://www.naver.com/">
+            <h1>
+              <span>네이버</span>
+            </h1>
+          </a>
+          <h2 class="blind">검색창</h2>
+          <fieldset class="fieldset">
+            <legend class="blind">검색</legend>
+            <div>
+              <input type="text" placeholder="검색어를 입력해 주세요." />
+              <button>
+                <span class="blind">검색</span>
+              </button>
+            </div>
           </fieldset>
           <a
             href="https://search.naver.com/search.naver?sm=top_ros&fbm=0&ie=utf8&query=4%C2%B719%ED%98%81%EB%AA%85+%EA%B8%B0%EB%85%90%EC%9D%BC"
@@ -111,6 +123,7 @@
       </ul>
     </nav>
     <main>
+      <div>광고</div>
       <h3>연합뉴스</h3>
       <ol>
         <li>속보) 개발자 고모씨 너무 피곤해 자고싶어... 파문</li>
@@ -146,37 +159,51 @@
         <li><img src="../images/스포츠동아.png" alt="스포츠동아" /></li>
       </ul>
 
-      <fieldset>
-        <legend>로그인</legend>
-        <h3>로그인</h3>
-        <p>네이버를 더 안전하고 편리하게 사용하세요</p>
-        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
-          <i> <span class="blind">네이버</span>로그인 </i>
-        </a>
-        <div>
-          <div>
-            <a href="">아이디</a>
-            <a href="">비밀번호 찾기</a>
-          </div>
-          <a href="">회원가입</a>
-        </div>
-      </fieldset>
+      <h3>오늘 읽을만한 글</h3>
+      <h4>주제별로 분류된 다양한 글 모음</h4>
+      <div>스포츠홈</div>
+      <div>뉴스 영상 모음</div>
 
-      <fieldset>
-        <legend>타임스퀘어</legend>
-        <h3>타임스퀘어</h3>
-        <a>러시아 904.60 <span>-21.48</span> <span>-2.32</span></a>
+      <h3>로그인</h3>
+      <p>네이버를 더 안전하고 편리하게 사용하세요</p>
+      <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+        <i> <span class="blind">네이버</span>로그인 </i>
+      </a>
+      <div>
         <div>
-          <a href="">이전</a>
-          <a href="">다음</a>
+          <a href="">아이디</a>
+          <a href="">비밀번호 찾기</a>
         </div>
-      </fieldset>
+        <a href="">회원가입</a>
+      </div>
+
+      <h3>타임스퀘어</h3>
+      <a>러시아 904.60 <span>-21.48</span> <span>-2.32</span></a>
+      <div>
+        <a href="">이전</a>
+        <a href="">다음</a>
+      </div>
+
+      <div>광고</div>
+
+      <iframe>
+        <h3>쇼핑</h3>
+        <h3>쇼핑뉴스</h3>
+        <h3>쇼핑뉴스</h3>
+        <h3>쇼핑 카테고리</h3>
+      </iframe>
     </main>
+
     <footer>
-      <!--footer-->
+      <div>banner-area</div>
+      <div>공지사항</div>
+      <div>Creaters</div>
+      <div>회사소개</div>
     </footer>
   </body>
 </html>
 
 <!-- <li><img src="../images/스포츠한국.png" /></li> -->
 <!-- <li><img src="../images/노컷뉴스.png" /></li> -->
+
+<!-- 시맨틱태그: 구역을 나누는 태그(header, nav, main, footer 등...) -->
