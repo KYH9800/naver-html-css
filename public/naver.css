@@ -17,21 +17,51 @@
   margin: 0 auto;
   max-width: 1080px;
 }
-#header-top {
-  /* float: right; */
+
+header {
+  height: 170px;
 }
-#header-top span {
-  /* color: #888; */
-  /* letter-spacing: -1px; */
-  /* font-size: 11px; */
-  /* line-height: 22px; */
+
+#header-top {
+  float: right;
+}
+
+#start-site-logo {
+  display: inline-block;
+  background-image: url(../images/sp_main_dba1af.png);
+  background-position: 71.2% 84%;
+  background-size: 550px;
+  height: 27px;
+  width: 26px;
+  /* border-radius: 50%; */
+  position: relative;
+  top: 9px;
+  right: 8px;
+}
+
+#header-top > span {
+  color: black;
+  letter-spacing: -1px;
+  font-size: 11px;
+  line-height: 22px;
+  margin: 0 5px;
+}
+
+#header-top span > a {
+  color: #888;
+  text-decoration: none;
 }
 
 /* 태그 > 자식 */
+#header-search {
+  padding: 0 20px;
+  display: inline-flex;
+}
+
 #header-search > .naver-logo {
-  display: inline-block;
-  width: 225px;
-  height: 58px;
+  display: block;
+  width: 220px;
+  height: 56px;
   background-image: url(../images/sp_main_dba1af.png);
   background-position: 0px 41.4%;
   background-size: 205%;
@@ -53,16 +83,20 @@
 #header-search fieldset {
   margin-left: 20px;
   margin-top: 12px;
-  display: inline-block;
+  display: block;
   padding: 12px 0 12px 10px;
-  width: 521px;
+  width: 565px;
   height: 54px;
   border-radius: 2px;
   border: 2px solid #19ce60;
-  vertical-align: middle;
+  /* vertical-align: middle; */
+  position: relative; /* search-button의 position을 가둘 수 있다 */
+  top: 15px;
 }
 
 #header-search fieldset input {
+  width: 444px;
+  height: 24px;
   border: none;
   outline: 0;
   font-size: 18px;
@@ -76,15 +110,51 @@
 
 #header-search fieldset button {
   /* position: absolute; */
-  width: 49px;
-  height: 49px;
+  width: 52px;
+  height: 52px;
   padding: 0;
   border: none;
   border-radius: 0 2px 2px 0;
-  background-color: #19ce60;
+  background: #19ce60;
   cursor: pointer;
-  /* 위치고정 */
+  /* 위치고정, fieldset에 position을 relative로 설정 */
   position: absolute;
   right: -2px;
-  top: -2px;
+  top: 0px;
+}
+
+#search-img {
+  background-image: url(../images/sp_main_dba1af.png);
+  background-position: 97% -0.3%;
+  background-size: 462px;
+  display: inline-block;
+  width: 26px;
+  height: 27px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+#search-keyboard {
+  background-image: url(../images/sp_main_dba1af.png);
+  background-position: 97% 93.9%;
+  background-size: 462px;
+  display: inline-block;
+  width: 27px;
+  height: 15px;
+  position: relative;
+  right: 5px;
+  top: 5px;
+  vertical-align: top;
+}
+
+#search-history {
+  background-image: url(../images/sp_main_dba1af.png);
+  background-position: 91.3% 17.5%;
+  background-size: 435px;
+  display: inline-block;
+  width: 12px;
+  height: 7px;
+  position: relative;
+  right: 5px;
+  top: 1px;
 }
